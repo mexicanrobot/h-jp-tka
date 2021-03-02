@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input id="litepicker">
+        <div id="results">
+            Results: 0 email(s)
+        </div>
+        <hr>
+        <table>
+            <th>
+                <tr>
+                    <td>
+                        From
+                    </td>
+                    <td>
+                        To
+                    </td>
+                    <td>
+                        Subject
+                    </td>
+                    <td>
+                        Date
+                    </td>
+                </tr>
+            </th>
+            <tbody id="email-table">
+
+            </tbody>
+        </table>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
+    <script>
+    const picker = new Litepicker({ 
+        element: document.getElementById('litepicker'),
+        singleMode: false,
+        numberOfColumns: 2,
+        numberOfMonths: 2
+    });
+    </script>
+    <script src="scripts/script.js"></script>
+</html>
