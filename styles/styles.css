@@ -1,0 +1,120 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    padding: 20px;
+}
+
+#litepicker {
+    border: 1px solid #d3d3d3;
+    border-radius: 4px 0px 0px 4px;
+    width: 160px;
+    padding-left: 35px;
+    height: 100%;
+}
+
+.search-input {
+    display: flex;
+    position: relative;
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.calendar-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+
+    left: 12px;
+    top: 8px;
+}
+
+.submit-date {
+    margin-left: -1px;
+    height: 34px;
+    border: 1px solid #d3d3d3;
+    border-radius: 0px 4px 4px 0px;
+    padding: 0px 12px 0px 12px;
+}
+
+.search-icon {
+    color: #333;
+    width: 18px;
+    height: 18px;
+}
+
+.results {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.email-table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.email-table-header {
+    display: none;
+    background-color: #f3f3f3;
+}
+
+.email-table-header div {
+    display: inline-flex;
+    flex: 1;
+    height: 25px;
+    color: #333;
+}
+
+.email-table-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-table-row {
+    display: flex;
+    border-top: 1px solid #d3d3d3;
+    height: 35px;
+}
+
+.email-table-row:hover {
+    color: blue;
+    background-color: #f3f3f3;
+}
+
+.email-table-row:last-of-type {
+    border-bottom: 1px solid #d3d3d3;
+}
+
+.email-table-row div {
+    display: inline-flex;
+    flex: 1;
+}
+
+.attachment-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.email-date {
+    font-weight: bold;
+}
+
+div.plus-email {
+    font-size: 14px;
+    height: 16px;
+    padding: 0px 4px 0px 4px;
+    flex: 0;
+    color: white;
+    background-color: #555;
+    border-radius: 3px;
+}
+
+.app-icon {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 200px;
+}

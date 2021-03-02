@@ -1,44 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-
+        <link rel="stylesheet" href="styles/styles.css">
     </head>
     <body>
-        <input id="litepicker">
-        <div id="results">
-            Results: 0 email(s)
+        <div class="search-input">
+            <object class="calendar-icon" type="image/svg+xml" data="images/icon_calender.svg"></object>
+            <input id="litepicker">
+            <button class="submit-date"><object class="search-icon" type="image/svg+xml" data="images/icon_search.svg"></object></button>
         </div>
+        <div class="results">Results: 0 email(s)</div>
         <hr>
-        <table>
-            <th>
-                <tr>
-                    <td>
-                        From
-                    </td>
-                    <td>
-                        To
-                    </td>
-                    <td>
-                        Subject
-                    </td>
-                    <td>
-                        Date
-                    </td>
-                </tr>
-            </th>
-            <tbody id="email-table">
-
-            </tbody>
-        </table>
+        <object class="app-icon" type="image/png" data="images/logo.png"></object>
+        <div class="email-table">
+            <div class="email-table-header">
+                <div>From</div>
+                <div>To</div>
+                <div>Subject</div>
+                <div>Date</div>
+            </div>
+            <div class="email-table-body"></div>
+        </div>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/litepicker/dist/litepicker.js"></script>
-    <script>
-    const picker = new Litepicker({ 
-        element: document.getElementById('litepicker'),
-        singleMode: false,
-        numberOfColumns: 2,
-        numberOfMonths: 2
-    });
-    </script>
     <script src="scripts/script.js"></script>
 </html>
