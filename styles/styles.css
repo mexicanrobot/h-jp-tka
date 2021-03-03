@@ -3,7 +3,8 @@ html {
 }
 
 body {
-    padding: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 #litepicker {
@@ -18,16 +19,7 @@ body {
     display: flex;
     position: relative;
     height: 30px;
-    margin-bottom: 20px;
-}
-
-.calendar-icon {
-    position: absolute;
-    width: 18px;
-    height: 18px;
-
-    left: 12px;
-    top: 8px;
+    margin: 15px 0px 15px 15px;
 }
 
 .submit-date {
@@ -45,71 +37,19 @@ body {
 }
 
 .results {
-    color: #333;
+    color: #555;
     font-size: 14px;
     font-weight: bold;
+    margin: 20px 0px 10px 15px;
 }
 
-.email-table {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
+.calendar-icon {
+    position: absolute;
+    width: 18px;
+    height: 18px;
 
-.email-table-header {
-    display: none;
-    background-color: #f3f3f3;
-}
-
-.email-table-header div {
-    display: inline-flex;
-    flex: 1;
-    height: 25px;
-    color: #333;
-}
-
-.email-table-body {
-    display: flex;
-    flex-direction: column;
-}
-
-.email-table-row {
-    display: flex;
-    border-top: 1px solid #d3d3d3;
-    height: 35px;
-}
-
-.email-table-row:hover {
-    color: blue;
-    background-color: #f3f3f3;
-}
-
-.email-table-row:last-of-type {
-    border-bottom: 1px solid #d3d3d3;
-}
-
-.email-table-row div {
-    display: inline-flex;
-    flex: 1;
-}
-
-.attachment-icon {
-    width: 16px;
-    height: 16px;
-}
-
-.email-date {
-    font-weight: bold;
-}
-
-div.plus-email {
-    font-size: 14px;
-    height: 16px;
-    padding: 0px 4px 0px 4px;
-    flex: 0;
-    color: white;
-    background-color: #555;
-    border-radius: 3px;
+    left: 12px;
+    top: 8px;
 }
 
 .app-icon {
@@ -117,4 +57,163 @@ div.plus-email {
     left: 50%;
     transform: translateX(-50%);
     top: 200px;
+}
+
+.asc::after {
+    background-image: url('../images/icon_arrow01.svg');
+}
+
+.desc::after {
+    background-image: url('../images/icon_arrow01.svg');
+    transform: rotate(180deg);
+}
+
+.email-table-header div::after {
+    display: inline-block;
+    content: '';
+    background-size: 8px 8px;
+    height: 8px;
+    width: 8px;
+
+    position: relative;
+    top: 0px;
+    left: 5px;
+}
+
+.email-table, .email-table-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.email-table {
+    width: 100%;
+}
+
+.email-table-header {
+    display: none;
+    background-color: #f3f3f3;
+    height: 35px;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+
+.email-table-header div {
+    padding-right: 10px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #555;
+}
+
+.email-table-header div.desc, .email-table-header div.asc {
+    color: black;
+}
+
+.email-table-header div:first-of-type::before {
+    content: '';
+}
+
+.email-table-header div:before {
+    content: '|';
+    color: #555;
+    padding-right: 15px;
+}
+
+.email-table-row {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    position: relative;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.email-icon {
+    float:left;
+    width: 14px;
+    height: 28px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.email-from {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.email-subject div {
+    display: block;
+    margin-top: 5px;
+    white-space: nowrap;
+    width: 350px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+}
+
+.email-date {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.open-icon {
+    position: absolute;
+    top: 13px;
+    right: 10px;
+
+    width: 10px;
+    height: 10px;
+}
+
+.attachment-icon {
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    width: 12px;
+    height: 12px;
+}
+
+.plus-email {
+    position: absolute;
+    top: 32px;
+    right: 12px;
+    color: white;
+    font-size: 12px;
+    border-radius: 3px;
+    padding: 0px 3px 0px 3px;
+    background-color:#888;
+}
+
+.email-body {
+    overflow: hidden;
+    margin-top: 5px;
+    height: 0px;
+    transition: height 0.5s ease-in;
+}
+
+.email-table-row.active .email-body {
+    height: 50px;
+}
+
+@media(min-width: 960px) {
+    .email-table-header, .email-table-row {
+        display: flex;
+    }
+
+    .email-table-header div, .email-table-row > div {
+        flex: 1;
+    }
+
+    .email-table-header div:before {
+        content: '';
+    }
+
+    .email-to {
+        white-space: nowrap;
+        width: 350px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+    }    
+
+    .open-icon, .email-icon {
+        display: none;
+    }
 }
