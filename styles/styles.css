@@ -295,4 +295,9 @@ body {
         align-items: flex-start;
         min-height: 100px;
     }
+
+    .email-table-row:hover {
+        background-color: #f3f3f3;
+        color: blue;
+    }
 }
