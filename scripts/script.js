@@ -6,7 +6,6 @@ let filteredEmails;
 const data = fetch("data/emails.json").then(response => response.json()).then(data => {
     originalEmails=data; 
     filteredEmails = originalEmails;
-    renderEmails(originalEmails);
 });
 
 //Init datepicker
@@ -131,14 +130,17 @@ function renderEmails(emails) {
     const table = document.querySelector('.email-table-body');
     const tableHeader = document.querySelector('.email-table-header');
     const appIcon = document.querySelector('.app-icon');
+    const hr = document.querySelector('hr');
 
     //Remove logo if emails available
     if(emails.length > 0) {
         tableHeader.style.display = "flex";
         appIcon.style.display = "none";
+        hr.style.display = "none";
     } else {
         tableHeader.style.display = "none";
         appIcon.style.display = "block";
+        hr.style.display = "block";
     }
 
     //Clear existing content
