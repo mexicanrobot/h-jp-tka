@@ -1,0 +1,9 @@
+- Started with basic desktop version
+- Decided to use vanilla js
+- Had some issues at first with date filtering
+- Decided to use litepicker for calendar
+- Once basic functionality was done, started styling
+- Decided it was better to just start with mobile version
+- Finished mobile, decided to expand row to inspect email
+- Finished desktop version which was tricky
+- Gave final inspection, make sure everything looked okay

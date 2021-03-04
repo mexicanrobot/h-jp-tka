@@ -1,0 +1,3 @@
+- Add a clear filter
+- Add a search input
+- Make more mobile friendly (inputs)
