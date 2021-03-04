@@ -184,36 +184,115 @@ body {
 
 .email-body {
     overflow: hidden;
-    margin-top: 5px;
     height: 0px;
     transition: height 0.5s ease-in;
 }
 
 .email-table-row.active .email-body {
-    height: 50px;
+    margin-top: 10px;
+    min-height: 50px;
 }
 
 @media(min-width: 960px) {
     .email-table-header, .email-table-row {
         display: flex;
+        align-items: center;
+        justify-items: flex-start;
     }
 
-    .email-table-header div, .email-table-row > div {
-        flex: 1;
+    div.email-table-row > div {
+        position: relative;
+        left: 5px;
     }
 
-    .email-table-header div:before {
+    .email-table-row div.email-from {
+        left: 0px;
+    }
+
+    .email-from, .header-from {
+        width: 20%;
+    }
+
+    .email-to, .header-to {
+        width: 30%;
+    }
+
+    .email-subject, .header-subject {
+        width: 40%;
+    }
+
+    .email-date, .header-date {
+        width: 10%;
+    }
+
+    .email-date {
+        font-weight: bold;
+    }
+
+    .email-table-header div:before, .email-table-header div:after{
         content: '';
+        padding: 0;
+    }
+
+    .email-table-header {
+        padding-left: 10px;
+        display: none;
     }
 
     .email-to {
-        white-space: nowrap;
-        width: 350px;
-        overflow: hidden;
-        text-overflow:ellipsis;
-    }    
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-    .open-icon, .email-icon {
+    .email-to > div {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .email-table-header div {
+        margin: 0;
+        padding: 0;
+    }
+
+    .email-table-row div{
+        margin: 0;
+        align-items: center;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+
+    .email-subject {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .email-body, .open-icon, .email-icon  {
         display: none;
+    }
+
+    object.attachment-icon {
+        position: relative;
+        top: 0;
+        right: 5px;
+    }
+
+    div.plus-email {
+        width: 15px;
+        left: -5px;
+    }
+
+    .email-table-row div.email-body {
+        display: block;
+        position: absolute;
+        top: 50px;
+    }
+
+    .email-table-row.active {
+        align-items: flex-start;
+        min-height: 100px;
     }
 }

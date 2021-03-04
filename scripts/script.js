@@ -106,7 +106,7 @@ function formatToArray(toArray) {
     if(toArray.length > 1) {
         return `<div>${toArray[0]},...</div><div class="plus-email">+${toArray.length-1}</div>`
     } else {
-        return toArray[0];
+        return `<div>${toArray[0]}</div>`;
     }
 }
 
